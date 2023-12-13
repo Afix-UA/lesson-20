@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+	<title>lesson-20</title>
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo">Pretty Stones</div>
+				<div class="header__menu menu">
+
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link">Home</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Shop</a></li>
+							<li class="menu__item menu__item--parent"><a href="" class="menu__link">Product</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Pages</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__actions actions-header">
+					<a href="" class="actions-header__item">
+						<img src="./img/header/favoritespng.png" alt="Favorites">
+						<span>1</span>
+					</a>
+					<a href="" class="actions-header__item">
+						<img src="./img/header/card.png" alt="Card">
+						<span>1</span>
+					</a>
+					<button type="button" class="icon-menu"><span></span></button>
+				</div>
+			</div>
+
+		</header>
+		<main class="page">
+			<section class="page__viewed viewed">
+				<div class="viewed__container">
+					<h2 class="viewed__title">recently viewed</h2>
+					<ul class="viewed__items">
+						<li class="viewed__item item-viewed">
+							<a href="#" class="item-viewed__link">
+								<img src="./img/viewed/01.jpg" class="item-viewed__image" alt="image">
+								<img src="./img/viewed/fovorites.svg" class="item-viewed__fovorites" alt="icon">
+									
+								<div class="item-viewed__content">
+									<h3 class="item-viewed__name">White T-Shirt</h3>
+									<span class="item-viewed__price">$13.00</span>
+									<p class="item-viewed__text">Priya’s  Brand</p>
+								</div>
+							</a>
+						</li>
+						<li class="viewed__item item-viewed">
+							<a href="#" class="item-viewed__link">
+								<img src="./img/viewed/01.jpg" class="item-viewed__image" alt="image">
+								<img src="./img/viewed/fovorites.svg" class="item-viewed__fovorites" alt="icon">
+									
+								<div class="item-viewed__content">
+									<h3 class="item-viewed__name">White T-Shirt</h3>
+									<span class="item-viewed__price">$13.00</span>
+									<p class="item-viewed__text">Priya’s  Brand</p>
+								</div>
+							</a>
+						</li>
+						<li class="viewed__item item-viewed">
+							<a href="#" class="item-viewed__link">
+								<img src="./img/viewed/01.jpg" class="item-viewed__image" alt="image">
+								<img src="./img/viewed/fovorites.svg" class="item-viewed__fovorites" alt="icon">
+									
+								<div class="item-viewed__content">
+									<h3 class="item-viewed__name">White T-Shirt</h3>
+									<span class="item-viewed__price">$13.00</span>
+									<p class="item-viewed__text">Priya’s  Brand</p>
+								</div>
+							</a>
+						</li>
+						<li class="viewed__item item-viewed">
+							<a href="#" class="item-viewed__link">
+								<img src="./img/viewed/01.jpg" class="item-viewed__image" alt="image">
+								<img src="./img/viewed/fovorites.svg" class="item-viewed__fovorites" alt="icon">
+									
+								<div class="item-viewed__content">
+									<h3 class="item-viewed__name">White T-Shirt</h3>
+									<span class="item-viewed__price">$13.00</span>
+									<p class="item-viewed__text">Priya’s  Brand</p>
+								</div>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script>
+		const icon = document.querySelectorAll('.icon-menu');
+		icon.forEach(elem => {
+			elem.addEventListener('click', function () {
+				document.documentElement.classList.toggle('menu-open');
+			});
+		});
+
+	</script>
+</body>
+<!--<fieldset>
+	<legend></legend>
+</fieldset> 
+-->
+
+</html>

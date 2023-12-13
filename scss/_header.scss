@@ -1,0 +1,257 @@
+
+.menu-open body {overflow: hidden;} //прибирає скрол на сайті при відкритому бургер меню 
+
+.header {
+
+    color: #000;
+    font-family: "Merriweather";
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #FFF9F4;
+
+
+    &__container {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        min-height: 100px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        @media (max-width:$tablet) {
+            min-height: 70px;
+        }
+
+        @media (max-width:$mobile) {
+            gap: 5px;
+        }
+    }
+
+
+    &__logo {
+        font-size: 30px;
+        font-style: italic;
+        font-weight: 700;
+        z-index: 51;
+
+        @media (max-width:$tablet) {
+            z-index: 105;
+        }
+
+        @media (max-width:$mobile) {
+            font-size: 24px;
+            text-wrap: nowrap;
+        }
+    }
+
+    &__menu {
+        flex: 1 1 auto;
+    }
+}
+
+.menu {
+
+    &__body {
+        @media (max-width:$tablet) {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            z-index: 100;
+            overflow: auto;
+            padding: 80px 15px 15px 30px;
+            background-color: #e2e2e2;
+
+            transition: left 0.3s ease 0s;
+
+
+            &::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                z-index: 2;
+                height: 70px;
+
+                background-color: #e9dfd9;
+                transition: left 0.3s ease 0s;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        column-gap: 26px;
+        row-gap: 8px;
+        flex-wrap: wrap;
+       
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 30px;
+        }
+    }
+
+    // &__item {}
+
+    &__link {
+        font-size: 20px;
+        padding: 5px; // Для покращення юзабіліті ( збільшив прощу натискання )
+        transition: all 0.3s ease 0s;
+        
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #D58417;
+                text-shadow: 1px 0px 0px;
+            }
+        }
+
+        @media (max-width:$tablet) {
+            font-size: 30px;
+            font-weight: 700;
+        }
+    }
+
+    &__item--parent {
+        display: flex;
+        position: relative;
+        align-items: center;
+        gap: 4px;
+    }
+}
+
+.menu-open .menu__body,
+.menu-open .menu__body::before {
+    left: 0;
+}
+
+.actions-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &__item {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        position: relative;
+        transition: transform 0.3s ease 0s;
+
+        & span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background-color: #FF3333;
+            color: #FFF;
+            font-size: 10px;
+            text-align: center;
+            padding-top: 1px;
+
+
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.1);
+
+            }
+
+        }
+
+        @media (max-width:$tablet) {
+            z-index: 105;
+        }
+    }
+    @media (max-width:$mobile) {
+        gap: 15px;
+        
+    }
+}
+
+.icon-menu {
+    display: none;
+    // display: block;
+    width: 30px;
+    background-color: transparent;
+    flex: 0 0 30px;
+    height: 18px;
+    position: relative;
+    z-index: 105;
+
+    &::before,
+    &::after,
+    & span {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s;
+        background-color: #000;
+    }
+
+    & span {
+        margin-top: -1px;
+    }
+
+    &::after {
+        top: 0;
+    }
+
+    &::before {
+        bottom: 0;
+    }
+
+    @media (max-width:$tablet) {
+        display: block;
+
+        .menu-open &::before {
+            transform: rotate(-45deg);
+            top: 50%;
+            margin-top: -1px;
+        }
+
+        .menu-open &::after {
+            transform: rotate(45deg);
+            top: 50%;
+            margin-top: -1px;
+        }
+
+        .menu-open & span {
+            transform: scale(0);
+
+        }
+    }
+
+}
+
+// .button {
+//     padding: 13px 28px;
+//     color: #FFF;
+//     font-size: 20px;
+//     font-style: normal;
+//     font-weight: 700;
+//     line-height: 100%;
+//     border-radius: 5px;
+//     background-color: #0E333D;
+//     transition: background-color 0.3s ease 0s;
+
+//     @media (any-hover: hover) {
+//         &:hover {
+//             background-color: #061a1f;
+//         }
+//     }
+
+// }
